@@ -1,14 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 
-import UserInput from "./UserInput";
+import Search from "./Search";
+import PopularAnime from "./PopularAnime";
 
 const Home = () => {
-  const [submitted, setSubmitted] = useState(false);
-
   return (
     <div>
-      <h1>Popular anime below</h1>
-      <UserInput />
+      <Search />
+      <PopularAnime />
     </div>
   );
 };
