@@ -1,2 +1,5 @@
-# Anime-Look-Up
-Created with CodeSandbox
+# TODO
+
+- [] styles
+- [] submit only when not empty
+- [] category selector
