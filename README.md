@@ -3,6 +3,6 @@
 - [] styles
 - [] submit only when not empty
 - [] content js - React.lazy
-- [] favourites
-- [] home
+- [x] favourites
+- [x] home
 - [] filter
