@@ -1,10 +1,10 @@
 import React from "react";
 
 import Anime from "./Anime";
-import { useAnime } from "../../../../hooks/useAnime";
+import { useAnime } from "../../../hooks/useAnime";
 
 const AnimeList = () => {
-  const anime = useAnime();
+  const { anime } = useAnime();
 
   return (
     <div>

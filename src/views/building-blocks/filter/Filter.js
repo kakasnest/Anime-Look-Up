@@ -1,8 +1,8 @@
 import React from "react";
 
-import Option from "./filter/Option";
-import LookUp from "./filter/LookUp";
-import Checkbox from "./filter/Checkbox";
+import Option from "./Option";
+import LookUp from "./LookUp";
+import Checkbox from "./Checkbox";
 
 const Filter = () => {
   const statuses = ["airing", "completed", "upcoming"];
@@ -29,7 +29,6 @@ const Filter = () => {
   return (
     <form>
       <h2>Filter</h2>
-
       <LookUp label="Title" />
       <Option label="Status" options={statuses} />
       <Option label="Types" options={types} />

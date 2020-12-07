@@ -1,7 +1,7 @@
 import React from "react";
 
-import Filter from "./home/Filter";
-import AnimeList from "./home/anime/AnimeList";
+import Filter from "../building-blocks/filter/Filter";
+import AnimeList from "../building-blocks/animelist/AnimeList";
 
 const Home = () => {
   return (

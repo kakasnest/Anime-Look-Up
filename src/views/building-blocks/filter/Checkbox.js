@@ -7,10 +7,10 @@ const Checkbox = ({ label, options }) => {
       <div>
         {options.map((genre) => {
           return (
-            <div>
-              <input type="checkbox" key={genre} value={genre} />
+            <label key={genre.genre}>
+              <input type="checkbox" value={genre.id} />
               {genre.genre}
-            </div>
+            </label>
           );
         })}
       </div>
