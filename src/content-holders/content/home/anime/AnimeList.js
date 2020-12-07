@@ -1,14 +1,14 @@
 import React from "react";
 
 import Anime from "./Anime";
-import { useAnime } from "../hooks/useAnime";
+import { useAnime } from "../../../../hooks/useAnime";
 
 const AnimeList = () => {
   const anime = useAnime();
 
   return (
     <div>
-      <h2>Some popular anime you might want to check</h2>
+      <h2>Some popular anime you might want to check out!</h2>
       <div>
         {anime.map((animeObject) => (
           <Anime key={animeObject.url} anime={animeObject} />

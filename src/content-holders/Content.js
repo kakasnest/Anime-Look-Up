@@ -4,8 +4,8 @@ import React, { Suspense } from "react";
 /* const Home = React.lazy(() => import("./Home"));
 const Favourites = React.lazy(() => import("./Favourites")); */
 
-import Home from "./Home";
-import Favourites from "./Favourites";
+import Home from "./content/Home";
+import Favourites from "./content/Favourites";
 
 const Content = () => {
   return (
