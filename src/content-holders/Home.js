@@ -1,13 +1,13 @@
 import React from "react";
 
-import Search from "./Search";
-import PopularAnime from "./PopularAnime";
+import Filter from "./Filter";
+import AnimeList from "./AnimeList";
 
 const Home = () => {
   return (
     <div>
-      <Search />
-      <PopularAnime />
+      <Filter />
+      <AnimeList />
     </div>
   );
 };
