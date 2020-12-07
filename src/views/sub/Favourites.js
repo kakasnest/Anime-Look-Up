@@ -1,7 +1,7 @@
 import React from "react";
 
 import { useFavourites } from "../../hooks/useFavourites";
-import Anime from "../building-blocks/animelist/Anime";
+import AnimeList from "../building-blocks/animelist/AnimeList";
 
 const Favourites = () => {
   const { favourites, add, remove, reset } = useFavourites();
@@ -9,11 +9,7 @@ const Favourites = () => {
   return (
     <div>
       <h1>Your favourites:</h1>
-      <div>
-        {favourites.map((animeObject) => (
-          <Anime key={animeObject.url} anime={animeObject} />
-        ))}
-      </div>
+      <AnimeList anime={favourites} />
     </div>
   );
 };

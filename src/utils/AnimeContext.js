@@ -18,5 +18,5 @@ export const AnimeProvider = (props) => {
     load();
   }, []);
 
-  return <AnimeContext.Provider value={anime} {...props} />;
+  return <AnimeContext.Provider value={{ anime, setAnime }} {...props} />;
 };

@@ -1,6 +1,5 @@
 import React from "react";
-import { FcLikePlaceholder } from "react-icons/fc";
-import { FcLike } from "react-icons/fc";
+import { FcLikePlaceholder, FcLike } from "react-icons/fc";
 
 import { useFavourites } from "../../../hooks/useFavourites";
 
@@ -10,15 +9,20 @@ const Anime = ({ anime }) => {
   return (
     <div>
       <img src={anime.image_url} alt={JSON.stringify(anime.title) + " image"} />
-      <div>{anime.title}</div>
-      <div>{anime.score}</div>
-      <div>{anime.synopsis}</div>
+      <div>Title: {anime.title}</div>
+      <div>Score on MyAnimeList: {anime.score}</div>
+      <div>
+        Synopsis: {anime.synopsis}
+        <a href={anime.url} target="_blank" rel="noopener noreferrer">
+          link
+        </a>
+      </div>
       <button
         onClick={
           favourites.includes(anime) ? () => remove(anime) : () => add(anime)
         }
       >
-        {favourites.includes(anime.title) ? <FcLike /> : <FcLikePlaceholder />}
+        {favourites.includes(anime) ? <FcLike /> : <FcLikePlaceholder />}
       </button>
     </div>
   );

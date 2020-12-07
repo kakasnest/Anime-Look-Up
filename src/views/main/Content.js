@@ -1,8 +1,8 @@
 import { Switch, Route, Redirect } from "react-router-dom";
 import React, { Suspense } from "react";
 
-/* const Home = React.lazy(() => import("./Home"));
-const Favourites = React.lazy(() => import("./Favourites")); */
+/* const Home = React.lazy(() => import("../sub/Home"));
+const Favourites = React.lazy(() => import("../sub/Favourites")); */
 
 import Home from "../sub/Home";
 import Favourites from "../sub/Favourites";

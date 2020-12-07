@@ -18,19 +18,20 @@ export const FavouritesProvider = (props) => {
   );
   const [favourites, dispatch] = useReducer(reducer, values);
 
-  const add = (id) => {
-    dispatch({ type: ADD, payload: id });
-    setValue([...values, id]);
+  const add = (anime) => {
+    dispatch({ type: ADD, payload: anime });
+    setValue([...values, anime]);
   };
 
-  const remove = (id) => {
+  const remove = (anime) => {
     console.log("called");
-    dispatch({ type: REMOVE, payload: id });
-    deleteValue(id);
+    dispatch({ type: REMOVE, payload: anime });
+    deleteValue(anime);
   };
 
   const reset = () => {
     dispatch({ type: RESET });
+    setValue([]);
   };
 
   return (
