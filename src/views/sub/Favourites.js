@@ -4,11 +4,11 @@ import { useFavourites } from "../../hooks/useFavourites";
 import AnimeList from "../building-blocks/animelist/AnimeList";
 
 const Favourites = () => {
-  const { favourites, add, remove, reset } = useFavourites();
+  const { favourites } = useFavourites();
 
   return (
     <div>
-      <h1>Your favourites:</h1>
+      <h2>Your favourites</h2>
       <AnimeList anime={favourites} />
     </div>
   );

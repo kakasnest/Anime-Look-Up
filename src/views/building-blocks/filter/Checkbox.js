@@ -1,6 +1,6 @@
 import React from "react";
 
-const Checkbox = ({ label, options }) => {
+const Checkbox = ({ label, options, changeMethod }) => {
   return (
     <div>
       <label>{label}:</label>
@@ -8,7 +8,7 @@ const Checkbox = ({ label, options }) => {
         {options.map((genre) => {
           return (
             <label key={genre.genre}>
-              <input type="checkbox" value={genre.id} />
+              <input type="checkbox" value={genre.id} onChange={changeMethod} />
               {genre.genre}
             </label>
           );

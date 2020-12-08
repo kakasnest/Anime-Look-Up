@@ -6,3 +6,4 @@
 - [x] favourites
 - [x] home
 - [] filter
+- [] load - "Loading"

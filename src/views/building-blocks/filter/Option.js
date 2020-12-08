@@ -1,10 +1,10 @@
 import React from "react";
 
-const Option = ({ label, options }) => {
+const Option = ({ label, options, changeMethod }) => {
   return (
     <div>
       <label>{label}:</label>
-      <select>
+      <select onChange={changeMethod}>
         <option></option>
         {options.map((option) => (
           <option key={option} value={option}>
