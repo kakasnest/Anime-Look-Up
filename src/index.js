@@ -5,6 +5,8 @@ import { BrowserRouter } from "react-router-dom";
 import ErrorBoundary from "./ErrorBoundary";
 import App from "./App";
 
+import AppStyle from "./AppStyle.css";
+
 const rootElement = document.getElementById("root");
 ReactDOM.render(
   <ErrorBoundary>
