@@ -2,23 +2,26 @@ import React from "react";
 
 import Option from "./Option";
 import LookUp from "./LookUp";
-import Checkbox from "./Checkbox";
 import { useFiltered } from "../../../hooks/useFiltered";
 
 const Filter = () => {
   const {
-    filterTypes: { statuses, genres, types, title },
-    filterMethods: { changeSubmit, changeStatus, changeType, changeGenre }
+    filterTypes: { types },
+    filterMethods: { changeSubmit, changeType, changeTitle },
+    states: { title, type }
   } = useFiltered();
 
   return (
     <form onSubmit={changeSubmit}>
       <h2>Filter</h2>
-      <LookUp label="Title" />
-      <Option label="Status" options={statuses} changeMethod={changeStatus} />
+      <LookUp label="Title" changeMethod={changeTitle} />
       <Option label="Types" options={types} changeMethod={changeType} />
-      <Checkbox label="Genres" options={genres} changeMethod={changeGenre} />
-      <button type="submit">Apply filter</button>
+      <button
+        type="submit"
+        disabled={Object.is(title, "") && Object.is(type, "")}
+      >
+        Apply filter
+      </button>
     </form>
   );
 };

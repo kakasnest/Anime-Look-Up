@@ -1,10 +1,10 @@
 import React from "react";
 
-const LookUp = ({ label }) => {
+const LookUp = ({ label, changeMethod }) => {
   return (
     <div>
       <label>{label}:</label>
-      <input type="text" minLength="3" />
+      <input type="text" onChange={changeMethod} />
     </div>
   );
 };
