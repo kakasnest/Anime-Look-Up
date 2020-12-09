@@ -6,17 +6,15 @@ export const AnimeContext = createContext();
 export const AnimeProvider = (props) => {
   const [anime, setAnime] = useState([]);
 
-  const load = async () => {
+  const load = async (page) => {
     const {
       data: { results }
-    } = await axios(process.env.REACT_APP_API_URL);
+    } = await axios(process.env.REACT_APP_API_URL + page);
     setAnime(results);
-    console.log(results);
   };
-
   useEffect(() => {
-    load();
+    load(1);
   }, []);
 
-  return <AnimeContext.Provider value={{ anime, setAnime }} {...props} />;
+  return <AnimeContext.Provider value={{ anime, load }} {...props} />;
 };

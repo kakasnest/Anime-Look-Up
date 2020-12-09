@@ -11,8 +11,8 @@ const useLocalStorage = (key, initialValue) => {
     }
   }, [values, key]);
 
-  const deleteValue = (id) => {
-    setValue(values.filter((val) => id !== val));
+  const deleteValue = (anime) => {
+    setValue(values.filter((storedAnime) => anime !== storedAnime));
   };
 
   return { values, setValue, deleteValue };

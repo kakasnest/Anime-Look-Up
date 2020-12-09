@@ -1,26 +1,15 @@
 import React from "react";
-
-import Filter from "../building-blocks/filter/Filter";
-import AnimeList from "../building-blocks/animelist/AnimeList";
-import { useAnime } from "../../hooks/useAnime";
-import FilteredView from "../building-blocks/filter/FilteredView";
 import { useFiltered } from "../../hooks/useFiltered";
+import UnfilteredView from "./UnfilteredView";
+import FilteredView from "./FilteredView";
 
 const Home = () => {
-  const { anime } = useAnime();
-  const { submitted } = useFiltered();
+  const {
+    states: { submitted }
+  } = useFiltered();
 
-  if (submitted) {
-    return <FilteredView />;
-  }
-
-  return (
-    <div>
-      <Filter />
-      <h2>Some popular anime you might want to check out!</h2>
-      <AnimeList anime={anime} />
-    </div>
-  );
+  if (submitted) return <FilteredView />;
+  else return <UnfilteredView />;
 };
 
 export default Home;
