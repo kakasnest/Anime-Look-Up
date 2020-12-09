@@ -10,6 +10,7 @@ export const AnimeProvider = (props) => {
     const {
       data: { results }
     } = await axios(process.env.REACT_APP_API_URL + page);
+    console.log(results);
     setAnime(results);
   };
   useEffect(() => {

@@ -5,14 +5,16 @@ import { useFiltered } from "../../../hooks/useFiltered";
 
 const FilteredAnimeList = ({ anime }) => {
   const {
-    states: { title, type }
+    states: { title }
   } = useFiltered();
 
   const compare = (anime) => {
-    const typeCheck = anime.type === type;
-    const titleCheck = JSON.stringify(anime.title).includes(title);
+    const titleToCheck = title.trim().toLowerCase();
+    const animeToCheck = anime.title.trim().toLowerCase();
 
-    return typeCheck || titleCheck;
+    const check = JSON.stringify(animeToCheck).includes(titleToCheck);
+
+    if (check === true) return anime;
   };
 
   return (

@@ -4,7 +4,7 @@ import Anime from "./Anime";
 
 const AnimeList = ({ anime }) => {
   return (
-    <div>
+    <div className="anime-list">
       {anime.map((animeObject) => (
         <Anime key={animeObject.url} anime={animeObject} />
       ))}
