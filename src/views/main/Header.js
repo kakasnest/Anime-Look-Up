@@ -6,8 +6,8 @@ import { BsFillCollectionFill } from "react-icons/bs";
 const Header = () => {
   return (
     <div className="header">
-      <h1 className="main-title">Anime-Look-Up</h1>
-      <div className="menu">
+      <h1>Anime-Look-Up</h1>
+      <div>
         <NavLink to="/">
           Home
           <IoHome />

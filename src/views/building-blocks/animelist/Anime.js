@@ -8,7 +8,7 @@ const Anime = ({ anime }) => {
 
   return (
     <div className="anime">
-      <img src={anime.image_url} alt={JSON.stringify(anime.title) + " image"} />
+      <img src={anime.image_url} alt={JSON.stringify(anime.title) + " image"} className="animeImage" />
       <div>Title: {anime.title}</div>
       <div>Score on MyAnimeList: {anime.score}</div>
       <div>

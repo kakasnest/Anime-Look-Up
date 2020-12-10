@@ -1,24 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;0,700;1,300&display=swap");
+
 * {
-  color: rgb(0, 0, 0);
+  color: #052f20;
   box-sizing: border-box;
-  font-family: sans-serif;
-  padding: 0;
-  margin: 0;
+  font-family: Roboto;
 }
 
 body {
-  background-color: #970d0d;
+  background: linear-gradient(
+    90deg,
+    rgba(251, 251, 251, 1) 0%,
+    rgba(255, 234, 181, 1) 25%,
+    rgba(255, 176, 27, 1) 50%,
+    rgba(255, 123, 0, 1) 75%,
+    rgba(255, 89, 0, 1) 100%
+  );
 }
 
 .anime {
-  background-color: rgb(236, 216, 172);
+  background: rgb(255, 255, 255);
   padding: 20px;
   margin: 40px;
   border-radius: 25px;
   width: 400px;
+  border: 2px solid black;
 }
 
-.anime-list {
+.anime-list,
+.filtered-anime-list {
   display: flex;
   flex-wrap: wrap;
+}
+
+.loading {
+  width: 200px;
+  height: 200px;
+  border: 16px solid rgb(255, 255, 255);
+  border-top: 16px solid rgb(255, 85, 0);
+  border-radius: 100%;
+  animation: spin 1.5s infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

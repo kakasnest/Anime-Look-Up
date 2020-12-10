@@ -10,12 +10,20 @@ export const AnimeProvider = (props) => {
     const {
       data: { results }
     } = await axios(process.env.REACT_APP_API_URL + page);
-    console.log(results);
-    setAnime(results);
+    setAnime((old) => {
+      return [...old, ...results];
+    });
   };
+
+  const getFivePageData = () => {
+    for (let index = 1; index < 6; index++) {
+      load(index);
+    }
+  };
+
   useEffect(() => {
-    load(1);
+    getFivePageData();
   }, []);
 
-  return <AnimeContext.Provider value={{ anime, load }} {...props} />;
+  return <AnimeContext.Provider value={{ anime }} {...props} />;
 };

@@ -18,7 +18,7 @@ const FilteredAnimeList = ({ anime }) => {
   };
 
   return (
-    <div>
+    <div className="filtered-anime-list">
       {anime.filter(compare).map((animeObject) => (
         <Anime key={animeObject.url} anime={animeObject} />
       ))}
