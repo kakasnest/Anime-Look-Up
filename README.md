@@ -10,7 +10,7 @@ The reason behind this one-site-application is using the knowledge of the last s
 
 ## API
 
-I used the [Jikan](https://jikan.moe/) API to get the listable data on the site. Right now the application only loads 5 sites of data, which will be loaded right after you visit the page. Jikan uses the data of MyAnimeList.
+I used the [Jikan](https://jikan.moe/) API to get the listable data on the site. Right now the application only loads 5 pages of data, which will be loaded right after you visit the page. Jikan uses the data of MyAnimeList.
 
 ## Structure
 
