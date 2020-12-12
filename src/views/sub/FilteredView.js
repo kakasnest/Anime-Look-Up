@@ -12,8 +12,8 @@ const UnfilteredView = () => {
   } = useFiltered();
 
   return (
-    <div>
-      <button onClick={reset} disabled={!submitted}>
+    <div className="filtered-view">
+      <button className="remove-filter" onClick={reset} disabled={!submitted}>
         Remove filters
       </button>
       <FilteredAnimeList anime={anime} />

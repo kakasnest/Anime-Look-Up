@@ -9,11 +9,11 @@ import { FilteredProvider } from "./utils/FilteredContext";
 const App = () => {
   return (
     <div>
-      <Header className="header" />
+      <Header />
       <AnimeProvider>
         <FavouritesProvider>
           <FilteredProvider>
-            <Content className="content" />
+            <Content />
           </FilteredProvider>
         </FavouritesProvider>
       </AnimeProvider>

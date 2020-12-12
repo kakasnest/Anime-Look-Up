@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;0,700;1,300&display=swap");
 
+/*General*/
 * {
-  color: #052f20;
+  color: #000000;
   box-sizing: border-box;
   font-family: Roboto;
 }
@@ -9,36 +10,81 @@
 body {
   background: linear-gradient(
     90deg,
-    rgba(251, 251, 251, 1) 0%,
-    rgba(255, 234, 181, 1) 25%,
-    rgba(255, 176, 27, 1) 50%,
-    rgba(255, 123, 0, 1) 75%,
-    rgba(255, 89, 0, 1) 100%
+    rgba(255, 255, 255, 1) 0%,
+    rgba(214, 213, 213, 1) 10%,
+    rgba(95, 95, 95, 1) 25%,
+    rgba(35, 35, 35, 1) 40%,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(35, 35, 35, 1) 60%,
+    rgba(95, 95, 95, 1) 75%,
+    rgba(214, 213, 213, 1) 90%,
+    rgba(255, 255, 255, 1) 100%
   );
 }
 
+/*Anime*/
 .anime {
-  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    115deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(122, 121, 121, 1) 8%,
+    rgba(0, 0, 0, 1) 19%,
+    rgba(0, 2, 6, 1) 50%,
+    rgba(0, 0, 0, 1) 73%,
+    rgba(170, 168, 168, 1) 90%,
+    rgba(255, 255, 255, 1) 100%
+  );
   padding: 20px;
   margin: 40px;
   border-radius: 25px;
   width: 400px;
-  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
+.anime-image {
+  width: 225px;
+  height: 325px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+
+.anime-title {
+  margin-bottom: 20px;
+  color: white;
+}
+
+.anime-text {
+  justify-content: center;
+  align-items: left;
+}
+
+.anime-detail {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: white;
+}
+
+/*Animelist*/
 .anime-list,
 .filtered-anime-list {
   display: flex;
   flex-wrap: wrap;
 }
 
+/*Loading*/
 .loading {
   width: 200px;
   height: 200px;
   border: 16px solid rgb(255, 255, 255);
-  border-top: 16px solid rgb(255, 85, 0);
+  border-top: 16px solid rgb(0, 0, 0);
   border-radius: 100%;
   animation: spin 1.5s infinite;
+  position: absolute;
+  top: 42%;
+  left: 42%;
 }
 
 @keyframes spin {
@@ -48,4 +94,29 @@ body {
   to {
     transform: rotate(360deg);
   }
+}
+
+/*FilteredView*/
+.filtered-view {
+  margin-top: 20px;
+}
+
+/*Filter*/
+.submit-filter,
+.anime-like,
+.remove-filter:hover {
+  cursor: pointer;
+}
+
+.submit-filter,
+.anime-like,
+.remove-filter {
+  border-radius: 5px;
+  background-color: #ffffff;
+  width: 100px;
+  height: 36px;
+}
+
+.submit-filter {
+  margin-top: 20px;
 }

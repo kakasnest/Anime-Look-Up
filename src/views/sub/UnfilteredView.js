@@ -10,7 +10,7 @@ const UnfilteredView = () => {
   return (
     <div>
       <Filter />
-      <h2 className="sub-title">Popular anime you might want to check!</h2>
+      <h2>Popular anime you might want to check!</h2>
       <AnimeList anime={anime} />
     </div>
   );
