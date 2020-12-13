@@ -15,14 +15,14 @@ export const AnimeProvider = (props) => {
     });
   };
 
-  const getFivePageData = () => {
+  const getFivePagesOfData = () => {
     for (let index = 1; index < 6; index++) {
       load(index);
     }
   };
 
   useEffect(() => {
-    getFivePageData();
+    getFivePagesOfData();
   }, []);
 
   return <AnimeContext.Provider value={{ anime }} {...props} />;

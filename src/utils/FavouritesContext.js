@@ -24,7 +24,6 @@ export const FavouritesProvider = (props) => {
   };
 
   const remove = (anime) => {
-    console.log("called");
     dispatch({ type: REMOVE, payload: anime });
     deleteValue(anime);
   };
